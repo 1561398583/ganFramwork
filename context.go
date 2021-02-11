@@ -15,6 +15,7 @@ type H map[string]interface{}
 //html 模板缓存
 var templateCache = make(map[string]*template.Template)
 
+//context的作用就是把所有需要的参数打个包。并且提供了很多的常用的处理函数，让用户不用写太多重复的代码。
 type Context struct {
 	// origin objects
 	Writer http.ResponseWriter
